@@ -21,7 +21,7 @@ data:
           discovery:
             all-namespaces: true
             enabled: true
-            discovery-server-url: 10.112.129.46:8761
+            discovery-server-url: *
 
       liquibase:
         change-log: classpath:db/changelog/db.changelog-master.yaml
@@ -39,7 +39,7 @@ data:
         open-in-view: true
 
       datasource:
-        url: jdbc:postgresql://rc1b-q2mvgi7gmirjip4w.mdb.yandexcloud.net:6432/yandexcloud-sandbox?&targetServerType=master&ssl=true&sslmode=verify-full
+        url: jdbc:postgresql://*.mdb.yandexcloud.net:6432/
         username: ${DB_USER}
         password: ${DB_PASSWORD}
         driver-class-name: org.postgresql.Driver
@@ -72,11 +72,11 @@ data:
     forn:
       kafka:
         group: kubernatesdemo
-        servers: rc1b-ob1jsog14ut94433.mdb.yandexcloud.net:9091
+        servers: *
         user: ${KAFKA_USER}
         password: ${KAFKA_PASSWORD}
         truststore:
-          location: /deployments/ssl/kafka/keystore.jks
+          location: *
           password: ${KAFKA_TRUSTSTORE_PASSWORD}
 
 

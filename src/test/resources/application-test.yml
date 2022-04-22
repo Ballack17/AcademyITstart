@@ -38,9 +38,9 @@ forn:
   property: Test property
   kafka:
     group: kubernatesdemo
-    servers: rc1b-ob1jsog14ut94433.mdb.yandexcloud.net:9091
+    servers: *
     user: forn
-    password: Pi=3141592653
+    password: *
     truststore:
-      location: c:\Workfiles\PitS\DevOps\yandexcloud\ci\kafka\client.truststore.jks
-      password: F!5T7aUm9]hQW(*u
+      location: *
+      password: *
