@@ -3,8 +3,8 @@ spring:
     protocol: smtps
     host: smtp.yandex.ru
     port: 465
-    username: d.davydenka
-    password: Kjiflrf13
+    username: *
+    password: *
     properties:
       "mail.smtp.ssl.enable": true
   application:
@@ -29,7 +29,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
-    password: Ltnjxrf1
+    password: *
     driver-class-name: org.postgresql.Driver
     tomcat:
       max-active: 10

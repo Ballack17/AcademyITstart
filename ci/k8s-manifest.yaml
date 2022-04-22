@@ -10,8 +10,8 @@ data:
         protocol: smtps
         host: smtp.yandex.ru
         port: 465
-        username: d.davydenka
-        password: Kjiflrf13
+        username: *
+        password: *
         properties:
           "mail.smtp.ssl.enable": true
       application:
