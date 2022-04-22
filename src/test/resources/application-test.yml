@@ -7,14 +7,14 @@ spring:
     protocol: smtps
     host: smtp.yandex.ru
     port: 465
-    username: d.davydenka
-    password: Kjiflrf13
+    username: *
+    password: *
     properties:
       "mail.smtp.ssl.enable": true
   datasource:
     url: jdbc:postgresql://localhost/postgresql
     username: postgres
-    password: Ltnjxrf1
+    password: *
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -39,7 +39,7 @@ forn:
   kafka:
     group: kubernatesdemo
     servers: *
-    user: forn
+    user: *
     password: *
     truststore:
       location: *
