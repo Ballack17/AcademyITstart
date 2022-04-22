@@ -1,0 +1,46 @@
+spring:
+  cloud:
+    kubernetes:
+      discovery:
+        enabled: false
+  mail:
+    protocol: smtps
+    host: smtp.yandex.ru
+    port: 465
+    username: d.davydenka
+    password: Kjiflrf13
+    properties:
+      "mail.smtp.ssl.enable": true
+  datasource:
+    url: jdbc:postgresql://localhost/postgresql
+    username: postgres
+    password: Ltnjxrf1
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      use-new-id-generator-mappings: true
+      ddl-auto: validate
+    properties:
+      hibernate.id.new_generator_mappings: true
+      hibernate.globally_quoted_identifiers: true
+      hibernate.jdbc.lob.non_contextual_creation: true
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    open-in-view: true
+
+  liquibase:
+    change-log: 'classpath:db/changelog/db.changelog-master.yaml'
+    enabled: true
+    default-schema: 'yandex_master'
+
+server:
+  port: 8181
+forn:
+  property: Test property
+  kafka:
+    group: kubernatesdemo
+    servers: rc1b-ob1jsog14ut94433.mdb.yandexcloud.net:9091
+    user: forn
+    password: Pi=3141592653
+    truststore:
+      location: c:\Workfiles\PitS\DevOps\yandexcloud\ci\kafka\client.truststore.jks
+      password: F!5T7aUm9]hQW(*u
